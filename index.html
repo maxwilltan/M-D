@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#301626" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="description" content="A private little corner of memories, love notes and wishes." />
+  <title>For My Favourite Person 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="noise"></div>
+  <div class="heart-field" aria-hidden="true"></div>
+
+  <header class="topbar glass-nav">
+    <a class="brand" id="brandText" href="#home">M <span>♡</span> You</a>
+    <nav>
+      <a href="#memories">Memories</a>
+      <a href="#love">Why You</a>
+      <a href="#wishlist">Wishlist</a>
+      <a href="#letter">Letter</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="customize-button" id="customizeBtn" aria-label="Customize this website">✦ Customize</button>
+      <button class="music-button" id="musicBtn" aria-label="Toggle music">♫</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">A LITTLE CORNER OF THE INTERNET</div>
+        <h1 id="heroTitle">For my favourite<br><em>person.</em></h1>
+        <p id="heroMessage">I wanted somewhere that feels a little like us — soft, warm, slightly chaotic, and full of memories I never want to forget.</p>
+        <div class="hero-actions">
+          <button class="ghost-btn" id="surpriseBtn">Tiny Surprise ✦</button>
+        </div>
+        <div class="mini-note">made with too much love & probably too much pink</div>
+      </div>
+
+      <div class="hero-visual reveal delay-1">
+        <div class="photo-orbit">
+          <div class="orbit-glow"></div>
+          <div class="polaroid polaroid-main">
+            <div class="photo-placeholder gradient-a" id="heroPhotoFrame">
+              <img id="heroPhoto" alt="Our favourite photo" hidden>
+              <span id="heroPhotoPlaceholder">your favourite photo together</span>
+            </div>
+            <p id="heroCaption">still my favourite view ♡</p>
+          </div>
+          <div class="floating-tag tag-one">my safe place</div>
+          <div class="floating-tag tag-two">you + me</div>
+          <div class="floating-heart heart-one">♡</div>
+          <div class="floating-heart heart-two">♥</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="days-strip glass-card reveal" aria-label="live relationship counter">
+      <div class="counter-heading">
+        <span class="stat-kicker">We've been together for</span>
+        <h2>Every little second with you ♡</h2>
+      </div>
+
+      <div class="live-counter" role="timer" aria-live="off">
+        <div class="time-unit">
+          <strong id="yearsTogether">00</strong>
+          <span>Years</span>
+        </div>
+        <div class="time-unit">
+          <strong id="monthsTogether">00</strong>
+          <span>Months</span>
+        </div>
+        <div class="time-unit">
+          <strong id="daysTogether">00</strong>
+          <span>Days</span>
+        </div>
+        <div class="time-unit">
+          <strong id="hoursTogether">00</strong>
+          <span>Hours</span>
+        </div>
+        <div class="time-unit">
+          <strong id="minutesTogether">00</strong>
+          <span>Minutes</span>
+        </div>
+        <div class="time-unit seconds-unit" id="secondsUnit">
+          <strong id="secondsTogether">00</strong>
+          <span>Seconds</span>
+        </div>
+      </div>
+
+      <div class="counter-message">Still counting. Still choosing you. Every second. 💗</div>
+    </section>
+
+    <section class="memories section" id="memories">
+      <div class="section-heading reveal">
+        <span class="eyebrow">THE GOOD STUFF</span>
+        <h2>Our memories</h2>
+        <p>Every photo here is a little piece of us I never want to forget.</p>
+      </div>
+
+      <div class="memory-marquee reveal" id="memoryMarquee" aria-label="Our memories. Drag or swipe to browse photos.">
+        <div class="memory-track" id="memoryTrack"></div>
+      </div>
+    </section>
+
+    <section class="love-grid section" id="love">
+      <div class="section-heading left reveal">
+        <span class="eyebrow">IN CASE YOU FORGET</span>
+        <h2>Things I love about you</h2>
+        <p>Click any card. Each one can later contain a real message from you.</p>
+      </div>
+
+      <div class="reason-grid">
+        <button class="reason-card glass-card reveal" data-reason-index="1" data-message="The way your smile changes the mood of an entire day is still unfair."><span>01</span><h3 id="reasonTitle1">Your smile</h3><p id="reasonShort1">Especially when you try not to laugh.</p></button>
+        <button class="reason-card glass-card reveal delay-1" data-reason-index="2" data-message="You make ordinary days feel worth remembering, and I don't think you realise how rare that is."><span>02</span><h3 id="reasonTitle2">The ordinary days</h3><p id="reasonShort2">You somehow make them special.</p></button>
+        <button class="reason-card glass-card reveal delay-2" data-reason-index="3" data-message="There is a version of me that exists because you believed in me before I knew how to believe in myself."><span>03</span><h3 id="reasonTitle3">Your support</h3><p id="reasonShort3">Even when I am overthinking everything.</p></button>
+        <button class="reason-card glass-card reveal" data-reason-index="4" data-message="The random reactions, weird jokes, little habits — all the things that make you completely you."><span>04</span><h3 id="reasonTitle4">Your little things</h3><p id="reasonShort4">The details I notice more than you think.</p></button>
+      </div>
+    </section>
+
+    <section class="wishlist-section section" id="wishlist">
+      <div class="wishlist-heading reveal">
+        <div>
+          <span class="eyebrow">A LITTLE LIST FOR SOMEDAY</span>
+          <h2>Your wishlist ♡</h2>
+          <p>A place for the things you have your eye on. Add anything you want me to buy in the future</p>
+        </div>
+        <button class="primary-btn wishlist-add-btn" id="openWishModal">＋ Add a wish</button>
+      </div>
+
+      <div class="wishlist-grid" id="wishlistGrid" aria-live="polite"></div>
+
+      <div class="wishlist-empty glass-card reveal" id="wishlistEmpty">
+        <div class="wishlist-empty-icon">♡</div>
+        <h3>Nothing here yet</h3>
+        <p>See something you like? Add it here so it doesn't get forgotten.</p>
+        <button class="ghost-btn" id="emptyAddWishBtn">Add the first wish</button>
+        <small>Wishes are saved on the device where they are added.</small>
+      </div>
+    </section>
+
+    <section class="letter-section section" id="letter">
+      <div class="section-heading reveal">
+        <span class="eyebrow">ONE LAST THING</span>
+        <h2>A letter for you</h2>
+        <p>Because some things deserve more than a short message.</p>
+      </div>
+
+      <button class="envelope reveal" id="openLetter" aria-label="Open love letter">
+        <span class="envelope-back"></span>
+        <span class="envelope-paper">open me ♡</span>
+        <span class="envelope-front"></span>
+        <span class="envelope-flap"></span>
+        <span class="seal">M</span>
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made for you, with love. <span>♡</span></p>
+  </footer>
+
+  <div class="modal" id="reasonModal" aria-hidden="true">
+    <div class="modal-panel glass-card">
+      <button class="modal-close" data-close="reasonModal">×</button>
+      <div class="modal-heart">♡</div>
+      <p id="reasonText"></p>
+    </div>
+  </div>
+
+  <div class="modal" id="letterModal" aria-hidden="true">
+    <div class="letter-paper">
+      <button class="modal-close dark" data-close="letterModal">×</button>
+      <span class="eyebrow">TO MY FAVOURITE PERSON</span>
+      <h2 id="letterGreeting">Hi love,</h2>
+      <div id="letterBody">
+        <p>I made this little place because photos get buried in galleries, messages disappear in chat histories, and sometimes I just want you to have something that says the same thing every time you open it: you matter to me.</p>
+        <p>Thank you for being part of the ordinary days, the difficult ones, the funny ones, and the moments I still replay in my head for no reason except that they make me happy.</p>
+        <p>This page is only a start. I want to fill it with our real photos, our actual dates, our stupid jokes, our songs, and every little memory that belongs to us.</p>
+      </div>
+      <p class="signature" id="letterSignature">Always yours,<br><strong>Maxwill ♡</strong></p>
+    </div>
+  </div>
+
+
+  <div class="modal wish-modal" id="wishModal" aria-hidden="true">
+    <form class="wish-panel glass-card" id="wishForm">
+      <button class="modal-close" type="button" data-close="wishModal" aria-label="Close wishlist form">×</button>
+      <span class="eyebrow">ADD SOMETHING YOU WANT</span>
+      <h2>New wish ♡</h2>
+      <p class="wish-modal-intro">Save a photo, name, note or link so it stays on your little wishlist.</p>
+
+      <div class="wish-upload-row">
+        <div class="wish-preview">
+          <img id="wishPreview" alt="Wish photo preview" hidden>
+          <div class="wish-preview-empty" id="wishPreviewEmpty"><span>♡</span><small>photo</small></div>
+        </div>
+        <div class="wish-upload-copy">
+          <label class="file-picker wish-photo-picker">Choose a photo<input id="wishPhoto" type="file" accept="image/*"></label>
+          <small>Optional, but it makes the wishlist much cuter.</small>
+        </div>
+      </div>
+
+      <label class="field-label wish-field"><span>What do you want?</span><input id="wishTitle" type="text" maxlength="80" placeholder="e.g. Pink headphones" required></label>
+      <label class="field-label wish-field"><span>Little note <small>(optional)</small></span><textarea id="wishNote" rows="3" maxlength="220" placeholder="Colour, size, why you like it..."></textarea></label>
+      <label class="field-label wish-field"><span>Product link <small>(optional)</small></span><input id="wishUrl" type="text" inputmode="url" placeholder="https://..."></label>
+
+      <div class="wish-form-footer">
+        <span>Saved to your shared wishlist ♡</span>
+        <button class="primary-btn" type="submit">Add to wishlist</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal wish-delete-modal" id="wishDeleteModal" aria-hidden="true">
+    <div class="wish-delete-panel glass-card" role="dialog" aria-modal="true" aria-labelledby="wishDeleteTitle">
+      <button class="modal-close" type="button" data-close="wishDeleteModal" aria-label="Close confirmation">×</button>
+      <div class="wish-delete-sparkle" aria-hidden="true">✦</div>
+      <span class="eyebrow">JUST CHECKING ♡</span>
+      <h2 id="wishDeleteTitle">Let this wish go?</h2>
+      <p>Are you sure you want to remove <strong id="wishDeleteName">this wish</strong> from the wishlist?</p>
+      <div class="wish-delete-actions">
+        <button class="ghost-btn wish-keep-btn" type="button" id="cancelWishDelete" data-close="wishDeleteModal">Keep it ♡</button>
+        <button class="primary-btn wish-confirm-delete" type="button" id="confirmWishDelete"><span>Remove wish</span><b aria-hidden="true">✦</b></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">You are very loved ♡</div>
+
+  <audio id="loveSong" preload="metadata"></audio>
+
+  <div class="modal auth-modal" id="customizeAuthModal" aria-hidden="true">
+    <form class="auth-panel glass-card" id="customizeAuthForm">
+      <button class="modal-close" type="button" data-close="customizeAuthModal" aria-label="Close login">×</button>
+      <div class="auth-icon">✦</div>
+      <span class="eyebrow">PRIVATE EDITOR</span>
+      <h2>Customize login</h2>
+      <p class="auth-intro">Enter your authorized username or email and password to open the website editor.</p>
+
+      <label class="field-label auth-field"><span>Username or email</span><input id="customizerUsername" type="text" autocomplete="username" required></label>
+      <label class="field-label auth-field"><span>Password</span><input id="customizerPassword" type="password" autocomplete="current-password" required></label>
+      <p class="auth-error" id="customizerAuthError" role="alert" aria-live="polite"></p>
+
+      <button class="primary-btn auth-submit" type="submit">Open Customize ♡</button>
+    </form>
+  </div>
+
+  <div class="modal customize-modal" id="customizeModal" aria-hidden="true">
+    <div class="customize-panel glass-card">
+      <button class="modal-close customize-close" data-close="customizeModal" aria-label="Close customizer">×</button>
+
+      <div class="customize-heading">
+        <div>
+          <span class="eyebrow">MAKE IT YOURS</span>
+          <h2>Customize your website</h2>
+          <p>Personalize everything in a few simple steps. Nothing changes on the public page until you press <strong>Save Changes</strong>.</p>
+        </div>
+        <div class="customize-status" id="customizeStatus"><span></span> Saved online</div>
+      </div>
+
+      <div class="customizer-layout">
+        <aside class="settings-sidebar" aria-label="Customization sections">
+          <div class="settings-sidebar-title">Your setup</div>
+          <button class="settings-tab active" type="button" data-settings-tab="basics">
+            <span class="settings-step">01</span><span><strong>Basics</strong><small>Names, date & intro</small></span>
+          </button>
+          <button class="settings-tab" type="button" data-settings-tab="photos">
+            <span class="settings-step">02</span><span><strong>Photos</strong><small>Main & gallery images</small></span>
+          </button>
+          <button class="settings-tab" type="button" data-settings-tab="reasons">
+            <span class="settings-step">03</span><span><strong>Love cards</strong><small>Things you love about her</small></span>
+          </button>
+          <button class="settings-tab" type="button" data-settings-tab="wishlist">
+            <span class="settings-step">04</span><span><strong>Wishlist</strong><small>Things she wants</small></span>
+          </button>
+          <button class="settings-tab" type="button" data-settings-tab="letter">
+            <span class="settings-step">05</span><span><strong>Love letter</strong><small>Your longer message</small></span>
+          </button>
+          <button class="settings-tab" type="button" data-settings-tab="music">
+            <span class="settings-step">06</span><span><strong>Music & backup</strong><small>Song, export & restore</small></span>
+          </button>
+
+        </aside>
+
+        <main class="settings-content" id="settingsContent">
+          <section class="settings-page active" data-settings-page="basics">
+            <div class="settings-page-heading">
+              <span class="settings-kicker">01 · BASICS</span>
+              <h3>Start with the two of you</h3>
+              <p>These details appear in the header, homepage and live relationship counter.</p>
+            </div>
+
+            <div class="field-grid two-col">
+              <label class="field-label"><span>Your name</span><input id="cfgYourName" type="text" placeholder="Maxwill"></label>
+              <label class="field-label"><span>Her name</span><input id="cfgPartnerName" type="text" placeholder="Her name"></label>
+            </div>
+            <label class="field-label"><span>Relationship start date & time</span><input id="cfgStart" type="datetime-local"><small>The counter will update live every second.</small></label>
+
+            <div class="editor-divider"></div>
+            <div class="settings-subheading"><h4>Homepage words</h4><p>Keep this short and personal—it sits beside your main photo.</p></div>
+            <label class="field-label"><span>Homepage title</span><input id="cfgHeroTitle" type="text" placeholder="For my favourite person."></label>
+            <label class="field-label"><span>Homepage message</span><textarea id="cfgHeroMessage" rows="4" placeholder="Write a short message for her..."></textarea></label>
+            <label class="field-label"><span>Main photo caption</span><input id="cfgHeroCaption" type="text" placeholder="still my favourite view ♡"></label>
+          </section>
+
+          <section class="settings-page" data-settings-page="photos">
+            <div class="settings-page-heading">
+              <span class="settings-kicker">02 · PHOTOS</span>
+              <h3>Choose the photos that feel like you</h3>
+              <p>Upload your main photo, then add as many gallery memories as you want. Every photo gets its own caption.</p>
+            </div>
+
+            <div class="hero-upload-editor">
+              <div class="media-preview hero-media-preview">
+                <img id="cfgHeroPreview" alt="Main photo preview" hidden>
+                <div class="media-preview-empty" id="cfgHeroPreviewEmpty"><span>♡</span><strong>Main photo</strong><small>Your favourite photo together</small></div>
+              </div>
+              <div class="media-upload-copy">
+                <span class="mini-label">HOMEPAGE PHOTO</span>
+                <h4>Your main photo</h4>
+                <p>This is the large tilted photo shown on the first screen.</p>
+                <label class="file-picker">Choose photo<input id="cfgHeroPhoto" type="file" accept="image/*"></label>
+                <small class="file-hint">JPG, PNG, HEIC/WebP where supported. Large photos are compressed automatically.</small>
+              </div>
+            </div>
+
+            <div class="editor-divider"></div>
+            <div class="gallery-editor-heading">
+              <div class="settings-subheading gallery-subheading"><h4>Memory gallery</h4><p>Five photo slots per row on desktop. Add more whenever you need them.</p></div>
+              <div class="gallery-editor-actions">
+                <span class="gallery-count-badge"><strong id="galleryEditorCount">6</strong> photos</span>
+                <button class="gallery-action-btn secondary" id="removeGalleryPhotoBtn" type="button">− Remove last</button>
+                <button class="gallery-action-btn" id="addGalleryPhotoBtn" type="button">＋ Add photo</button>
+              </div>
+            </div>
+            <div class="gallery-editor-grid" id="galleryEditorGrid"></div>
+          </section>
+
+          <section class="settings-page" data-settings-page="reasons">
+            <div class="settings-page-heading">
+              <span class="settings-kicker">03 · LOVE CARDS</span>
+              <h3>Tell her the little things you notice</h3>
+              <p>Each card has a title, a short line, and a longer message that appears when she clicks it.</p>
+            </div>
+            <div class="reason-editor-grid">
+              <article class="reason-editor-card"><div class="reason-editor-number">01</div><label class="field-label"><span>Card title</span><input id="cfgReasonTitle1" type="text"></label><label class="field-label"><span>Short description</span><input id="cfgReasonShort1" type="text"></label><label class="field-label"><span>Message after clicking</span><textarea id="cfgReasonMessage1" rows="4"></textarea></label></article>
+              <article class="reason-editor-card"><div class="reason-editor-number">02</div><label class="field-label"><span>Card title</span><input id="cfgReasonTitle2" type="text"></label><label class="field-label"><span>Short description</span><input id="cfgReasonShort2" type="text"></label><label class="field-label"><span>Message after clicking</span><textarea id="cfgReasonMessage2" rows="4"></textarea></label></article>
+              <article class="reason-editor-card"><div class="reason-editor-number">03</div><label class="field-label"><span>Card title</span><input id="cfgReasonTitle3" type="text"></label><label class="field-label"><span>Short description</span><input id="cfgReasonShort3" type="text"></label><label class="field-label"><span>Message after clicking</span><textarea id="cfgReasonMessage3" rows="4"></textarea></label></article>
+              <article class="reason-editor-card"><div class="reason-editor-number">04</div><label class="field-label"><span>Card title</span><input id="cfgReasonTitle4" type="text"></label><label class="field-label"><span>Short description</span><input id="cfgReasonShort4" type="text"></label><label class="field-label"><span>Message after clicking</span><textarea id="cfgReasonMessage4" rows="4"></textarea></label></article>
+            </div>
+          </section>
+
+          <section class="settings-page" data-settings-page="wishlist">
+            <div class="settings-page-heading">
+              <span class="settings-kicker">04 · WISHLIST</span>
+              <h3>A wishlist she can fill herself</h3>
+              <p>She can add wishes directly from the public website—no Customize access needed.</p>
+            </div>
+
+            <div class="wishlist-editor-card">
+              <div class="wishlist-editor-icon">♡</div>
+              <div class="wishlist-editor-copy">
+                <span class="mini-label">PUBLIC INTERACTIVE FEATURE</span>
+                <h4>She controls this part</h4>
+                <p>Each wish can include a photo, item name, optional note and optional product link. The list stays saved on the device where she adds it.</p>
+                <div class="wishlist-feature-chips">
+                  <span>Photo upload</span><span>Item name</span><span>Note</span><span>Product link</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wishlist-editor-actions">
+              <button class="primary-btn" type="button" id="openWishlistFromCustomizer">View wishlist section</button>
+              
+            </div>
+          </section>
+
+          <section class="settings-page" data-settings-page="letter">
+            <div class="settings-page-heading">
+              <span class="settings-kicker">05 · LOVE LETTER</span>
+              <h3>Write something she can keep coming back to</h3>
+              <p>This appears when she opens the envelope near the bottom of the page.</p>
+            </div>
+            <div class="letter-editor-paper">
+              <label class="field-label"><span>Greeting</span><input id="cfgLetterGreeting" type="text" placeholder="Hi love,"></label>
+              <label class="field-label"><span>Your letter</span><textarea id="cfgLetterBody" rows="15" placeholder="Write your letter here. Leave a blank line to start a new paragraph."></textarea><small>Blank lines become separate paragraphs.</small></label>
+              <label class="field-label"><span>Signature</span><input id="cfgSignature" type="text" placeholder="Always yours, Maxwill ♡"></label>
+            </div>
+          </section>
+
+          <section class="settings-page" data-settings-page="music">
+            <div class="settings-page-heading">
+              <span class="settings-kicker">06 · MUSIC & BACKUP</span>
+              <h3>Add your song and keep a backup</h3>
+              <p>Your song is played by the ♫ button in the top-right corner of the website.</p>
+            </div>
+
+            <div class="music-editor-card">
+              <div class="music-editor-icon">♫</div>
+              <div class="music-editor-copy"><span class="mini-label">YOUR SONG</span><h4 id="musicFileStatus">No song uploaded yet</h4><p>MP3, M4A or WAV. Smaller files load faster after deployment.</p></div>
+              <label class="file-picker">Choose song<input id="cfgMusic" type="file" accept="audio/*"></label>
+            </div>
+
+            <div class="editor-divider"></div>
+            <div class="settings-subheading"><h4>Backup & deployment</h4><p>Download a backup any time. Your live site content is already saved online.</p></div>
+            <div class="backup-grid">
+              <button class="backup-card" type="button" id="exportSettingsBtn"><span class="backup-icon">↓</span><strong>Export site data</strong><small>Downloads a JSON backup of your current online site settings and wishlist.</small></button>
+              <label class="backup-card import-card"><span class="backup-icon">↑</span><strong>Import site data</strong><small>Load a previous backup into Customize, then press Save Changes to publish it.</small><input id="importSettingsInput" type="file" accept="application/json,.json"></label>
+              <button class="backup-card danger-backup" type="button" id="resetSettingsBtn"><span class="backup-icon">↺</span><strong>Reset everything</strong><small>Return text, photos, music and wishlist to the demo version.</small></button>
+            </div>
+            <div class="deploy-note"><strong>For Vercel</strong><span>Deploy this folder as-is. Your public content and wishlist load from Supabase automatically.</span></div>
+          </section>
+        </main>
+      </div>
+
+      <div class="customizer-footer">
+        <div class="customizer-footer-copy"><span class="footer-dot"></span><span id="currentSettingsLabel">Editing · Basics</span></div>
+        <div class="customizer-footer-actions">
+          <button class="ghost-btn" type="button" id="lockCustomizerBtn">Lock</button>
+          <button class="ghost-btn" type="button" id="viewSiteBtn">Close</button>
+          <button class="primary-btn" type="button" id="saveSettingsBtn">Save Changes ♡</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
